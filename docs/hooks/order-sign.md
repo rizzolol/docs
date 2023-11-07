@@ -549,4 +549,3 @@ Version | Description
 1.0 | Initial Release
 1.0.1 | Add DeviceRequest to list of order resources for R4.
 1.1.0 | Updated hook to all for use in order-revision situations
-2.0 | Revise language for the draftOrders field
