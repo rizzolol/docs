@@ -28,7 +28,7 @@ Field | Optionality | Prefetch Token | Type | Description
 `patientId` | REQUIRED | Yes | *string* |  The FHIR `Patient.id` of the current patient in context
 `encounterId` | OPTIONAL | Yes | *string* |  The FHIR `Encounter.id` of the current encounter in context
 `selections` | REQUIRED | No| *array* | The FHIR id of the newly selected order(s).<br />The `selections` field references FHIR resources in the `draftOrders` Bundle. For example, `MedicationRequest/103`.
-`draftOrders` | REQUIRED | No | *object* | DSTU2 - FHIR Bundle of MedicationOrder, DiagnosticOrder, DeviceUseRequest, ReferralRequest, ProcedureRequest, NutritionOrder, VisionPrescription with _draft_ status <br/> STU3 - FHIR Bundle of MedicationRequest, ReferralRequest, ProcedureRequest, NutritionOrder, VisionPrescription with _draft_ status <br/> R4 - FHIR Bundle of DeviceRequest, MedicationRequest, NutritionOrder, ServiceRequest, VisionPrescription with _draft_ status
+`draftOrders` | REQUIRED | No | *object* | FHIR Bundles of Request resource(s) in the process of being ordered (typically with draft status) (e.g. ServiceRequest)
 
 
 

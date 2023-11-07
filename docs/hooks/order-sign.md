@@ -28,7 +28,7 @@ Field | Optionality | Prefetch Token | Type | Description
 `userId` | REQUIRED | Yes | *string* | The id of the current user.<br />For this hook, the user is expected to be of type [Practitioner](https://www.hl7.org/fhir/practitioner.html) or [PractitionerRole](https://www.hl7.org/fhir/practitionerrole.html).<br />For example, `PractitionerRole/123` or `Practitioner/abc`.
 `patientId` | REQUIRED | Yes | *string* |  The FHIR `Patient.id` of the current patient in context
 `encounterId` | OPTIONAL | Yes | *string* |  The FHIR `Encounter.id` of the current encounter in context
-`draftOrders` | REQUIRED | No | *object* | DSTU2 - FHIR Bundle of MedicationOrder, DiagnosticOrder, DeviceUseRequest, ReferralRequest, ProcedureRequest, NutritionOrder, VisionPrescription (typically with _draft_ status) <br/> STU3 - FHIR Bundle of MedicationRequest, ReferralRequest, ProcedureRequest, NutritionOrder, VisionPrescription (typically with _draft_ status) <br/> R4 - FHIR Bundle of DeviceRequest, MedicationRequest, NutritionOrder, ServiceRequest, VisionPrescription (typically with _draft_ status)
+`draftOrders` | REQUIRED | No | *object* | FHIR Bundles of Request resource(s) in the process of being ordered (typically with draft status) (e.g. ServiceRequest)
 
 
 
@@ -549,3 +549,4 @@ Version | Description
 1.0 | Initial Release
 1.0.1 | Add DeviceRequest to list of order resources for R4.
 1.1.0 | Updated hook to all for use in order-revision situations
+2.0 | Revise language for the draftOrders field
